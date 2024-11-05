@@ -1,0 +1,26 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Crear una nueva Cita</ion-card-title>
+
+    <ion-list lines="none">
+      <ion-item>
+        <ion-input required="required" fill="solid" label="Cita" labelPlacement="floating" minlength="5"
+          errorText="Autor debe tener minimo 5 caracteres" [(ngModel)]="citaStr" type="string"
+          #formCita="ngModel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input required="required" fill="solid" label="Autor" labelPlacement="floating" minlength="2"
+          errorText="Autor debe tener minimo 2 caracteres" ngModel type="string"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-button [disabled]="!formCita.valid" (click)="crearCita()" slot="start" fill="outline">Agregar
+          Cita</ion-button>
+      </ion-item>
+
+
+    </ion-list>
+
+  </ion-card-header>
+
+</ion-card>

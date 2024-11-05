@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Citas 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-obtener-cita-aleatoria/>
+</ion-content>
+
+<ion-footer >
+  <ion-toolbar>
+        <ion-button 
+        [routerLink]="['/gestion-citas']"
+        slot="end" 
+        size="small">
+          Agregar Cita 
+          <ion-icon  name="heart"></ion-icon>
+        </ion-button>
+  </ion-toolbar>
+</ion-footer>
